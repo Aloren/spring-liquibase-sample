@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.0.xsd
+        http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+
+
+    <changeSet id="service_db_structure" author="asmirnova">
+
+        <sqlFile path="tables/group.sql" relativeToChangelogFile="true"/>
+
+    </changeSet>
+
+    <changeSet id="service_db_data" author="asmirnova">
+
+        <sqlFile path="data/load_group.sql" relativeToChangelogFile="true"/>
+
+    </changeSet>
+
+
+    <changeSet author="asmirnova" id="tag-version-1.0">
+        <tagDatabase tag="version-1.0"/>
+    </changeSet>
+
+</databaseChangeLog>
